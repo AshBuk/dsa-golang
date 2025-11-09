@@ -1,7 +1,12 @@
 <img src="ALgoDSgo.png" alt="AlgoDSgo Logo" width="250" align="right">
 
+<div align="center">
+
 ### AlgoDSgo
+
 #### Algorithms & Data Structures in Go | Search, Sort, Interview Exercises | Educational Repository
+
+</div>
 
 Educational focus on classic fundamental algorithms and data structures, with walkthroughs in complex areas, implemented in Go.
 
