@@ -15,7 +15,7 @@ Written during the learning process as a help for learners. Emphasis on clean, u
 ├─ **search/** → [Binary](algorithms/search/binarysearch/binarysearch.go) · [Linear](algorithms/search/linearsearch/linearsearch.go) · [Jump](algorithms/search/jumpsearch/jumpsearch.go) · [BFS](algorithms/search/bfs/bfs.go) · [DFS](algorithms/search/dfs/dfs.go)  
 └─ **sort/** → [Bubble](algorithms/sort/bubblesort/bubblesort.go) · [Selection](algorithms/sort/selectionsort/selectionsort.go) · [Insertion](algorithms/sort/insertionsort/insertionsort.go) · [Merge](algorithms/sort/mergesort/mergesort.go) · [Quick](algorithms/sort/quicksort/quicksort.go) · [Quick In-Place](algorithms/sort/quicksortinplace/quicksortinplace.go) · [Heap](algorithms/sort/heapsort/heapsort.go)
 
-**datastructures/** → [Planned](datastructures/DS.md)
+**data_structures/** → [Plan](data_structures/DS.md)
 
 **interview_exercises/** → [Merge Array](interview_exercises/mergesortedarray/mergesortedarray.go) · [Reverse](interview_exercises/reversestring/reversestring.go) · [Duplicates](interview_exercises/removeduplicates/removeduplicates.go) · [Whitespaces](interview_exercises/removewhitespaces/removewhitespaces.go) · [Longest](interview_exercises/longestword/longestword.go)
 
@@ -27,7 +27,3 @@ go run bubblesort.go
 ```
 
 ## MIT [LICENSE](LICENSE)
-
-
-
-
