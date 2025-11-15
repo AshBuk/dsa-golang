@@ -11,27 +11,28 @@ import (
 	"strings"
 )
 
-func FindFileDFS(directoryName, fileName string) string {
-	files, _ := os.ReadDir(directoryName)
+func FindFileDFS(dirName string, fileName string) (string, bool) {
+	files, _ := os.ReadDir(dirName)
 
 	for _, file := range files {
-		fullPath := filepath.Join(directoryName, file.Name())
+		fullPath := filepath.Join(dirName, file.Name())
 		if file.IsDir() {
-			if result := FindFileDFS(fullPath, fileName); result != "" {
-				return result
+			if path, found := FindFileDFS(fullPath, fileName); found {
+				return path, true
 			}
 		} else if strings.Contains(file.Name(), fileName) {
-			return fullPath
+			return fullPath, true
 		}
 
 	}
-	return ""
+	return "", false
 }
 
 func main() {
-	result := FindFileDFS("directoryName", "fileName")
-	if result != "" {
-		fmt.Println(result)
+	// Placeholder: replace with actual directory path and file name
+	path, found := FindFileDFS("/path/to/dir", "file.txt")
+	if found {
+		fmt.Println(path)
 	}
 }
 
@@ -42,11 +43,12 @@ Explores each directory fully before moving to siblings (depth-first traversal).
 Recursively descends into subdirectories immediately when encountered.
 
 Parameters:
-  - directoryName: path to the directory to traverse
+  - dirName: root folder to start search
   - fileName: name or part of the file name to search for
 
 Returns:
-  - full path to the found file, or empty string if not found
+  - string: full path to the found file, or empty string if not found
+  - bool: true if file was found, false otherwise
 
 Used Go standard library:
 
