@@ -12,24 +12,50 @@ Educational focus on classic fundamental algorithms and data structures, with wa
 
 Written during the learning process to help learners. Emphasis on clean, understandable code and semantic naming, avoiding overcomplication, attempting to convey fundamental CS understanding.
 
-
 ## 📚 Included
 
-**algorithms/**  
-├─ **search/** → [Binary](algorithms/search/binarysearch/binarysearch.go) · [Linear](algorithms/search/linearsearch/linearsearch.go) · [Jump](algorithms/search/jumpsearch/jumpsearch.go) · [BFS](algorithms/search/bfs/bfs.go) · [DFS](algorithms/search/dfs/dfs.go)  
-└─ **sort/** → [Bubble](algorithms/sort/bubblesort/bubblesort.go) · [Selection](algorithms/sort/selectionsort/selectionsort.go) · [Insertion](algorithms/sort/insertionsort/insertionsort.go) · [Merge](algorithms/sort/mergesort/mergesort.go) · [Quick](algorithms/sort/quicksort/quicksort.go) · [Quick In-Place](algorithms/sort/quicksortinplace/quicksortinplace.go) · [Heap](algorithms/sort/heapsort/heapsort.go)
+<pre>
+<strong>algorithms/</strong>
+├── <strong>search/</strong>
+│   ├── <a href="algorithms/search/binarysearch/binarysearch.go">Binary</a>
+│   ├── <a href="algorithms/search/linearsearch/linearsearch.go">Linear</a>
+│   ├── <a href="algorithms/search/jumpsearch/jumpsearch.go">Jump</a>
+│   ├── <a href="algorithms/search/bfs/filesystem/bfs.go">BFS Filesystem</a> · <a href="algorithms/search/bfs/graph/bfs.go">BFS Graph</a>
+│   └── <a href="algorithms/search/dfs/filesystem/dfs.go">DFS Filesystem</a> · <a href="algorithms/search/dfs/graph/dfs.go">DFS Graph</a>
+└── <strong>sort/</strong>
+    ├── <a href="algorithms/sort/bubblesort/bubblesort.go">Bubble</a>
+    ├── <a href="algorithms/sort/selectionsort/selectionsort.go">Selection</a>
+    ├── <a href="algorithms/sort/insertionsort/insertionsort.go">Insertion</a>
+    ├── <a href="algorithms/sort/mergesort/mergesort.go">Merge</a>
+    ├── <a href="algorithms/sort/quicksort/quicksort.go">Quick</a>
+    ├── <a href="algorithms/sort/quicksortinplace/quicksortinplace.go">Quick In-Place</a>
+    └── <a href="algorithms/sort/heapsort/heapsort.go">Heap</a>
 
-**datastructures/** → [Planned](datastructures/DS.md)
+<strong>datastructures/</strong>
+└── <a href="datastructures/DS.md">Planned</a>
 
-**leetcode/** → [Two Sum #1](leetcode/twosum/twosum.go) · [Merge Sorted Array #88](leetcode/mergesortedarray/mergesortedarray.go) · [Valid Palindrome #125](leetcode/ispalidrome/ispalidrome.go)
+<strong>leetcode/</strong>
+├── <a href="leetcode/twosum/twosum.go">Two Sum #1</a>
+├── <a href="leetcode/mergesortedarray/mergesortedarray.go">Merge Sorted Array #88</a>
+└── <a href="leetcode/ispalidrome/ispalidrome.go">Valid Palindrome #125</a>
 
-**interview_exercises/** → [Reverse](interview_exercises/reversestring/reversestring.go) · [Duplicates](interview_exercises/removeduplicates/removeduplicates.go) · [Whitespaces](interview_exercises/removewhitespaces/removewhitespaces.go) · [Longest](interview_exercises/longestword/longestword.go)
+<strong>interview_exercises/</strong>
+├── <a href="interview_exercises/reversestring/reversestring.go">Reverse</a>
+├── <a href="interview_exercises/removeduplicates/removeduplicates.go">Duplicates</a>
+├── <a href="interview_exercises/removewhitespaces/removewhitespaces.go">Whitespaces</a>
+└── <a href="interview_exercises/longestword/longestword.go">Longest</a>
 
-**informatica/** → [Factorial](informatica/factorial/factorial.go) · [Fibonacci](informatica/fibonacci/fibonacci.go) · [Prime](informatica/isprime/isprime.go) · [Table](informatica/multitable/multitable.go)
+<strong>informatica/</strong>
+├── <a href="informatica/factorial/factorial.go">Factorial</a>
+├── <a href="informatica/fibonacci/fibonacci.go">Fibonacci</a>
+├── <a href="informatica/isprime/isprime.go">Prime</a>
+└── <a href="informatica/multitable/multitable.go">Table</a>
+</pre>
 
 ```bash
 cd algorithms/sort/bubblesort
 go run bubblesort.go
 ```
+**🔖[See Article](https://ashbuk.hashnode.dev/go-learning-journey-through-algorithms)**
 
 ## MIT [LICENSE](LICENSE)
