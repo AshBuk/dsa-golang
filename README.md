@@ -32,7 +32,8 @@ Written during the learning process to help learners. Emphasis on clean, underst
     └── <a href="algorithms/sort/heapsort/heapsort.go">Heap</a>
 
 <strong>datastructures/</strong>
-└── <a href="datastructures/DS.md">Planned</a>
+└── <strong>graph/</strong>
+    └── <a href="datastructures/graph/adjacencylist.go">Adjacency List</a>
 
 <strong>leetcode/</strong>
 ├── <a href="leetcode/twosum/twosum.go">Two Sum #1</a>
