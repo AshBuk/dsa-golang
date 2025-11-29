@@ -62,9 +62,7 @@ go run bubblesort.go
 ```
 
 This repository provides practical, minimal Go implementations of core Computer Science concepts.  
-It includes multiple approaches to BFS/DFS traversal in graphs and filesystems, several sorting strategies including in-place variants,  
-basic graph structures, foundational informatics exercises, and structured solutions to common interview and LeetCode tasks.  
-The project layout mirrors real code organization, making the repository a compact learning and reference resource.
+It includes multiple approaches to BFS/DFS traversal in graphs and filesystems, several sorting strategies including in-place variants, basic graph structures, foundational informatics exercises, and structured solutions to common interview and LeetCode tasks. The project layout mirrors real code organization, making the repository a compact learning and reference resource.
 
 **🔖[See Article](https://ashbuk.hashnode.dev/go-learning-journey-through-algorithms)**
 
