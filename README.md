@@ -4,13 +4,16 @@
 
 ### AlgoDSgo
 
-#### Algorithms & Data Structures in Go | Search, Sort, Interview Exercises | Educational Repository
+#### Algorithms & Data Structures in Go (Golang)
+
+#### Searching, Sorting, Interview Problems, Algorithmic Patterns
+
+#### Educational Computer Science Examples
 
 </div>
 
-Educational focus on classic fundamental algorithms and data structures, with walkthroughs in complex areas, implemented in Go.
-
-Written during the learning process to help learners. Emphasis on clean, understandable code and semantic naming, avoiding overcomplication, attempting to convey fundamental CS understanding.
+>**Educational repository** focused on classic fundamental **algorithms and data structures**, implemented idiomatically in Go.
+Includes walkthroughs in complex areas, clean code, semantic naming, and emphasis on building real CS understanding without unnecessary abstraction.
 
 ## 📚 Included
 
@@ -57,6 +60,12 @@ Written during the learning process to help learners. Emphasis on clean, underst
 cd algorithms/sort/bubblesort
 go run bubblesort.go
 ```
+
+This repository provides practical, minimal Go implementations of core Computer Science concepts.  
+It includes multiple approaches to BFS/DFS traversal in graphs and filesystems, several sorting strategies including in-place variants,  
+basic graph structures, foundational informatics exercises, and structured solutions to common interview and LeetCode tasks.  
+The project layout mirrors real code organization, making the repository a compact learning and reference resource.
+
 **🔖[See Article](https://ashbuk.hashnode.dev/go-learning-journey-through-algorithms)**
 
 ## MIT [LICENSE](LICENSE)
