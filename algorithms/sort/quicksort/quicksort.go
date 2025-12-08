@@ -18,11 +18,11 @@ func quickSort(arr []int) []int {
 	right := []int{}
 	pivot := arr[0]
 
-	for _, value := range arr[1:] {
-		if value <= pivot {
-			left = append(left, value)
+	for _, v := range arr[1:] {
+		if v <= pivot {
+			left = append(left, v)
 		} else {
-			right = append(right, value)
+			right = append(right, v)
 		}
 	}
 	return append(append(quickSort(left), pivot), quickSort(right)...)

@@ -8,14 +8,14 @@ import "fmt"
 
 func insertionSort(arr []int) []int {
 	for i := 1; i < len(arr); i++ {
-		trackValue := arr[i]
-		leftIndex := i - 1
+		v := arr[i]
+		leftIdx := i - 1
 
-		for leftIndex >= 0 && arr[leftIndex] > trackValue {
-			arr[leftIndex+1] = arr[leftIndex]
-			leftIndex--
+		for leftIdx >= 0 && arr[leftIdx] > v {
+			arr[leftIdx+1] = arr[leftIdx]
+			leftIdx--
 		}
-		arr[leftIndex+1] = trackValue
+		arr[leftIdx+1] = v
 	}
 	return arr
 }
@@ -29,25 +29,25 @@ How insertion sort works:
 
 Example: [1, 3, 2, 6, 4, 99, 7]
 
-ITERATION 1 (i=1, trackValue=3):
+ITERATION 1 (i=1, v=3):
     [1, 3, 2, 6, 4, 99, 7]
-     ↑ sorted (leftIndex=0)
+     ↑ sorted (leftIdx=0)
         ↑ current (i=1)
     Compare: 1 ≤ 3 ✓ → insert 3 at position 1
     [1, 3, 2, 6, 4, 99, 7]  ← already in correct position
 
-ITERATION 2 (i=2, trackValue=2):
+ITERATION 2 (i=2, v=2):
     [1, 3, 2, 6, 4, 99, 7]
-        ↑ sorted (leftIndex=1)
+        ↑ sorted (leftIdx=1)
            ↑ current (i=2)
     Compare: 3 > 2 ✗ → shift 3 right
     [1, _, 3, 6, 4, 99, 7]
     Compare: 1 ≤ 2 ✓ → insert 2 at position 1
     [1, 2, 3, 6, 4, 99, 7]
 
-ITERATION 3 (i=3, trackValue=6):
+ITERATION 3 (i=3, v=6):
     [1, 2, 3, 6, 4, 99, 7]
-           ↑ sorted (leftIndex=2)
+           ↑ sorted (leftIdx=2)
               ↑ current (i=3)
     Compare: 3 ≤ 6 ✓ → insert 6 at position 3
     [1, 2, 3, 6, 4, 99, 7]  ← already in correct position

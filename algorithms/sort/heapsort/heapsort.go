@@ -27,10 +27,10 @@ func heapSort(arr []int) []int {
 }
 
 // heapify maintains max heap property for subtree rooted at index i
-func heapify(arr []int, heapSize int, rootIndex int) {
-	largest := rootIndex
-	left := 2*rootIndex + 1
-	right := 2*rootIndex + 2
+func heapify(arr []int, heapSize int, rootIdx int) {
+	largest := rootIdx
+	left := 2*rootIdx + 1
+	right := 2*rootIdx + 2
 
 	// If left child is larger than root
 	if left < heapSize && arr[left] > arr[largest] {
@@ -43,8 +43,8 @@ func heapify(arr []int, heapSize int, rootIndex int) {
 	}
 
 	// If largest is not root, swap and continue heapifying
-	if largest != rootIndex {
-		arr[rootIndex], arr[largest] = arr[largest], arr[rootIndex]
+	if largest != rootIdx {
+		arr[rootIdx], arr[largest] = arr[largest], arr[rootIdx]
 		heapify(arr, heapSize, largest)
 	}
 }

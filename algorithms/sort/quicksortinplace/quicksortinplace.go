@@ -5,40 +5,37 @@
 
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func quickSortInPlace(arr []int, leftIndex, rightIndex int) {
-	if leftIndex < rightIndex {
-		pivotIndex := partition(arr, leftIndex, rightIndex)
-		quickSortInPlace(arr, leftIndex, pivotIndex-1)  // recursively sort left
-		quickSortInPlace(arr, pivotIndex+1, rightIndex) // recursively sort right
+func qSortInPlace(arr []int, lo, hi int) {
+	if lo < hi {
+		pivotIdx := partition(arr, lo, hi)
+		qSortInPlace(arr, lo, pivotIdx-1) // sort left
+		qSortInPlace(arr, pivotIdx+1, hi) // sort right
 	}
 }
 
 // Lomuto partition scheme
 // Places pivot element in correct position and returns its index
-func partition(arr []int, leftIndex, rightIndex int) int {
-	pivot := arr[rightIndex]
-	leftBound := leftIndex - 1
+func partition(arr []int, lo, hi int) int {
+	pivot := arr[hi]
+	storeIdx := lo - 1
 
-	for i := leftIndex; i < rightIndex; i++ {
+	for i := lo; i < hi; i++ {
 		if arr[i] <= pivot {
-			leftBound++
-			arr[leftBound], arr[i] = arr[i], arr[leftBound]
+			storeIdx++
+			arr[storeIdx], arr[i] = arr[i], arr[storeIdx]
 		}
 	}
-
-	arr[leftBound+1], arr[rightIndex] = arr[rightIndex], arr[leftBound+1]
-	return leftBound + 1
+	arr[storeIdx+1], arr[hi] = arr[hi], arr[storeIdx+1]
+	return storeIdx + 1
 }
 
 func main() {
 	arr := []int{4, 6, 2, 8, 3, 7, 1, 9, 5, 10}
-	leftIndex := 0
-	rightIndex := len(arr) - 1
-	quickSortInPlace(arr, leftIndex, rightIndex)
+	lo := 0
+	hi := len(arr) - 1
+	qSortInPlace(arr, lo, hi)
 	fmt.Println(arr)
 }
 
@@ -54,7 +51,7 @@ PARTITION PHASE (in-place rearrangement):
     After partition: [4, 6, 2, 8, 3, 7, 1, 9, 5, 10]
                      └──────elements ≤ 10──────┘ │
                      All elements fit, pivot stays at end
-                     pivotIndex = 9
+                     pivotIdx = 9
 
     Recursion: quickSort(arr, 0, 8) and quickSort(arr, 10, 9) - nothing
 
@@ -62,7 +59,7 @@ First recursion on [4, 6, 2, 8, 3, 7, 1, 9, 5]:
     pivot = 5 (last)
     After swaps: [4, 2, 3, 1, 5, 7, 6, 9, 8]
                  └──≤5─────┘  │  └──>5────┘
-                 pivotIndex = 4
+                 pivotIdx = 4
 
     Recursion: quickSort(arr, 0, 3) and quickSort(arr, 5, 8)
 
@@ -70,13 +67,13 @@ Continue left [4, 2, 3, 1]:
     pivot = 1
     After swaps: [1, 2, 3, 4]
                   │ └─>1───┘
-                 pivotIndex = 0
+                 pivotIdx = 0
 
 Continue right [7, 6, 9, 8]:
     pivot = 8
     After swaps: [7, 6, 8, 9]
                  └≤8─┘  │  >8
-                 pivotIndex = 2
+                 pivotIdx = 2
 
 ... recursion continues until sorted
 

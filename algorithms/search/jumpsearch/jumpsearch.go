@@ -21,17 +21,17 @@ func jumpSearch(arr []int, target int) (int, bool) {
 		return -1, false
 	}
 	jumpStep := int(math.Sqrt(float64(n)))
-	startIndex := 0
+	lo := 0
 
 	for arr[clampToArrLen(jumpStep, n)-1] < target {
-		startIndex = jumpStep
+		lo = jumpStep
 		jumpStep += jumpStep
-		if startIndex >= n {
+		if lo >= n {
 			return -1, false
 		}
 	}
 
-	for i := startIndex; i < clampToArrLen(jumpStep, n); i++ {
+	for i := lo; i < clampToArrLen(jumpStep, n); i++ {
 		if arr[i] == target {
 			return i, true
 		}
@@ -52,9 +52,9 @@ func main() {
 
 /*
 Example walkthrough: arr = [1, 2, 3, 4, 5, 7, 9, 11, 13], target = 11
-n=9, jumpStep=3, startIndex=0
-Jump 1: arr[2]=3 < 11 → startIndex=3, jumpStep=6
-Jump 2: arr[5]=7 < 11 → startIndex=6, jumpStep=9
+n=9, jumpStep=3, lo=0
+Jump 1: arr[2]=3 < 11 → lo=3, jumpStep=6
+Jump 2: arr[5]=7 < 11 → lo=6, jumpStep=9
 Jump 3: arr[8]=13 >= 11 → stop!
 Linear search: in block [6..9] → found at index 7
 */

@@ -10,18 +10,18 @@ import (
 )
 
 func binarySearch(arr []int, target int) (int, bool) {
-	left := 0
-	right := len(arr) - 1
+	lo := 0
+	hi := len(arr) - 1
 
-	for left <= right {
-		mid := left + (right-left)/2 // prevents int overflow vs (left+right)/2;
+	for lo <= hi {
+		mid := lo + (hi-lo)/2 // prevents int overflow vs (lo+hi)/2;
 		// not required in Go due to 64-bit ints, but good practice
 		if target == arr[mid] {
 			return mid, true
 		} else if target < arr[mid] {
-			right = mid - 1
+			hi = mid - 1
 		} else {
-			left = mid + 1
+			lo = mid + 1
 		}
 	}
 	return -1, false

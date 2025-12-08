@@ -7,9 +7,9 @@ package main
 import "fmt"
 
 func linearSearch(arr []int, target int) (int, bool) {
-	for index, value := range arr {
-		if value == target {
-			return index, true
+	for idx, v := range arr {
+		if v == target {
+			return idx, true
 		}
 	}
 	return -1, false

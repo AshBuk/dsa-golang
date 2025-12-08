@@ -13,8 +13,8 @@ func fibonacci(n int) int {
 		if n <= 1 {
 			return n
 		}
-		if val, ok := memo[n]; ok {
-			return val
+		if v, ok := memo[n]; ok {
+			return v
 		}
 		memo[n] = fib(n-1) + fib(n-2)
 		return memo[n]

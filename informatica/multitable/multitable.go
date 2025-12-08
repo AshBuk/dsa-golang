@@ -22,8 +22,8 @@ func main() {
 	var size int
 	fmt.Scan(&size)
 	for _, row := range multiplicationTable(size) {
-		for _, val := range row {
-			fmt.Printf(`%4d`, val)
+		for _, v := range row {
+			fmt.Printf(`%4d`, v)
 		}
 		fmt.Println()
 	}

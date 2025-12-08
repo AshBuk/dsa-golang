@@ -11,10 +11,10 @@ func removeDuplicates(arr []int) []int {
 	seen := make(map[int]bool)
 	uniqueElements := []int{}
 
-	for _, value := range arr {
-		if !seen[value] {
-			seen[value] = true
-			uniqueElements = append(uniqueElements, value)
+	for _, v := range arr {
+		if !seen[v] {
+			seen[v] = true
+			uniqueElements = append(uniqueElements, v)
 		}
 	}
 	return uniqueElements
