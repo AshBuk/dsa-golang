@@ -1,8 +1,8 @@
-<img src="ALgoDSgo.png" alt="AlgoDSgo Logo" width="250" align="right">
+<img src="ALgoDSgo.png" alt="dsa-golang Logo" width="250" align="right">
 
 <div align="center">
 
-### AlgoDSgo
+### dsa-golang
 
 #### Algorithms & Data Structures in Go (Golang)
 
