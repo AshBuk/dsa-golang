@@ -25,6 +25,8 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 │   ├── <a href="algorithms/search/jumpsearch/jumpsearch.go">Jump</a>
 │   ├── <a href="algorithms/search/bfs/filesystem/bfs.go">BFS Filesystem</a> · <a href="algorithms/search/bfs/graph/bfsqueue/bfsqueue.go">BFS Graph Queue</a>
 │   └── <a href="algorithms/search/dfs/filesystem/dfs.go">DFS Filesystem</a> · <a href="algorithms/search/dfs/graph/dfsrecursive/dfsrecursive.go">DFS Graph Recursive</a> · <a href="algorithms/search/dfs/graph/dfsstack/dfsstack.go">DFS Graph Stack</a>
+├── <strong>selection/</strong>
+│   └── <a href="algorithms/selection/quickselect/quickselect.go">Quickselect</a>
 └── <strong>sort/</strong>
     ├── <a href="algorithms/sort/bubblesort/bubblesort.go">Bubble</a>
     ├── <a href="algorithms/sort/selectionsort/selectionsort.go">Selection</a>
