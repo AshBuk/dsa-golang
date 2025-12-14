@@ -1,5 +1,5 @@
 // Jump Search Algorithm
-// Time: O(√n) - jumps (√n) square root of n times -> then linear search within block
+// Time: O(√n) - jumps √n blocks of size √n, then linear search within block
 // Space: O(1) - only using constant extra space
 // Note: requires sorted array
 
@@ -20,18 +20,18 @@ func jumpSearch(arr []int, target int) (int, bool) {
 	if n == 0 {
 		return -1, false
 	}
-	jumpStep := int(math.Sqrt(float64(n)))
-	lo := 0
-
-	for arr[clampToArrLen(jumpStep, n)-1] < target {
-		lo = jumpStep
-		jumpStep += jumpStep
-		if lo >= n {
+	step := int(math.Sqrt(float64(n)))
+	prev := 0
+	// Jump forward
+	for arr[min(step, n)-1] < target {
+		prev = step
+		step += int(math.Sqrt(float64(n))) // fixed step size
+		if prev >= n {
 			return -1, false
 		}
 	}
-
-	for i := lo; i < clampToArrLen(jumpStep, n); i++ {
+	// Linear search within the block [prev .. min(step, n)]
+	for i := prev; i < min(step, n); i++ {
 		if arr[i] == target {
 			return i, true
 		}
@@ -39,11 +39,13 @@ func jumpSearch(arr []int, target int) (int, bool) {
 	return -1, false
 }
 
-func clampToArrLen(jumpStep, n int) int {
-	if jumpStep < n {
-		return jumpStep
+// Note: custom min is used for Go < 1.21 compatibility
+// and to make algorithm boundaries explicit.
+func min(a, b int) int {
+	if a < b {
+		return a
 	}
-	return n // avoid jumping beyond array length
+	return b
 }
 
 func main() {
@@ -52,9 +54,9 @@ func main() {
 
 /*
 Example walkthrough: arr = [1, 2, 3, 4, 5, 7, 9, 11, 13], target = 11
-n=9, jumpStep=3, lo=0
-Jump 1: arr[2]=3 < 11 → lo=3, jumpStep=6
-Jump 2: arr[5]=7 < 11 → lo=6, jumpStep=9
+n=9, step=3 (√9=3), prev=0
+Jump 1: arr[2]=3 < 11 → prev=3, step=6
+Jump 2: arr[5]=7 < 11 → prev=6, step=9
 Jump 3: arr[8]=13 >= 11 → stop!
 Linear search: in block [6..9] → found at index 7
 */
