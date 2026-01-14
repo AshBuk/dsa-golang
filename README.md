@@ -19,6 +19,8 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 
 <pre>
 <strong>algorithms/</strong>
+├── <strong>metrics/</strong>
+│   └── <a href="algorithms/metrics/jaccard.go">Jaccard Similarity</a>
 ├── <strong>search/</strong>
 │   ├── <a href="algorithms/search/binarysearch/binarysearch.go">Binary</a>
 │   ├── <a href="algorithms/search/linearsearch/linearsearch.go">Linear</a>
