@@ -12,8 +12,12 @@
 
 </div>
 
->**Educational repository** focused on classic fundamental **algorithms and data structures**, implemented idiomatically in Go.
+**Educational repository** focused on classic fundamental **algorithms and data structures**, implemented idiomatically in Go.
 Includes walkthroughs in complex areas, clean code, semantic naming, and emphasis on building real CS understanding without unnecessary abstraction.
+
+>Implementations shaped by books, practice, and retyping code for muscle memory.
+
+>Diagrams and comments refined with AI assistance.
 
 ## 📚 Included
 
@@ -65,9 +69,6 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 cd algorithms/sort/bubblesort
 go run bubblesort.go
 ```
-
-This repository provides practical, minimal Go implementations of core Computer Science concepts.  
-It includes multiple approaches to BFS/DFS traversal in graphs and filesystems, several sorting strategies including in-place variants, basic graph structures, foundational informatics exercises, and structured solutions to common interview and LeetCode tasks. The project layout mirrors real code organization, making the repository a compact learning and reference resource.
 
 **🔖[See Article](https://ashbuk.hashnode.dev/dsa-golang)**
 
