@@ -14,17 +14,21 @@ func quickSelect(arr []int, k int) int {
 	hi := len(arr) - 1
 
 	for lo <= hi {
-		// Lomuto partition
+		// Lomuto partition: split array into [<=pivot] | pivot | [>=pivot]
 		pivot := arr[hi]
-		storeIdx := lo - 1
+		storeIdx := lo - 1 // boundary: elements at indices <=storeIdx are <=pivot
+
 		for i := lo; i < hi; i++ {
 			if arr[i] <= pivot {
+				// Found "good" element (<=pivot), expand left zone
+				// storeIdx+1 holds a "frozen" bad element (>pivot) - push it right
 				storeIdx++
 				arr[storeIdx], arr[i] = arr[i], arr[storeIdx]
 			}
 		}
-		arr[storeIdx+1], arr[hi] = arr[hi], arr[storeIdx+1]
+		// Place pivot right after all elements ≤ it
 		pivotIdx := storeIdx + 1
+		arr[pivotIdx], arr[hi] = arr[hi], arr[pivotIdx]
 
 		// Found k-th element
 		if k-1 == pivotIdx {
