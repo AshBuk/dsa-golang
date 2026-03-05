@@ -20,8 +20,8 @@ func findNodeDFSRecursive(graph map[int][]int, node int, target int, visited map
 	neighbors := graph[node]
 	for _, neighbor := range neighbors {
 		if !visited[neighbor] {
-			if foundNode, found := findNodeDFSRecursive(graph, neighbor, target, visited); found {
-				return foundNode, true
+			if _, found := findNodeDFSRecursive(graph, neighbor, target, visited); found {
+				return target, true
 			}
 		}
 	}
