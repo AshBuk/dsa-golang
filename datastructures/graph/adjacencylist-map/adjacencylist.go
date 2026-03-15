@@ -3,8 +3,8 @@
 //
 // Time Complexity:
 //   - AddVertex:    O(1) - hash map insertion
-//   - AddEdge:      O(1) - amortized append to slice
-//   - RemoveEdge:   O(E) - linear search through neighbors
+//   - AddEdge:      O(degree) - duplicate check before append
+//   - RemoveEdge:   O(degree) - linear search through neighbors
 //   - RemoveVertex: O(V + E) - must update all neighbors
 //   - GetNeighbors: O(1) - direct map access
 //   - HasEdge:      O(degree) - linear search through neighbors
@@ -97,33 +97,13 @@ func (g *Graph) Print() {
 }
 
 func main() {
-	// Create a new graph
 	graph := NewGraph()
-
-	// Add edges (vertices are added automatically)
 	graph.AddEdge(1, 2)
 	graph.AddEdge(1, 3)
 	graph.AddEdge(2, 4)
 	graph.AddEdge(2, 5)
 	graph.AddEdge(3, 6)
 	graph.AddEdge(5, 6)
-
-	fmt.Println("Adjacency List Graph:")
-	graph.Print()
-
-	fmt.Printf("\nGraph size: %d vertices\n", graph.Size())
-	fmt.Printf("Neighbors of vertex 2: %v\n", graph.GetNeighbors(2))
-	fmt.Printf("Edge between 1 and 3 exists: %v\n", graph.HasEdge(1, 3))
-	fmt.Printf("Edge between 1 and 5 exists: %v\n\n", graph.HasEdge(1, 5))
-
-	// Remove an edge
-	graph.RemoveEdge(5, 6)
-	fmt.Println("After removing edge (5, 6):")
-	graph.Print()
-
-	// Remove a vertex
-	fmt.Println("\nAfter removing vertex 2:")
-	graph.RemoveVertex(2)
 	graph.Print()
 }
 
