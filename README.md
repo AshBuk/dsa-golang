@@ -45,8 +45,12 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
     └── <a href="algorithms/sort/heapsort/heapsort.go">Heap</a>
 
 <strong>datastructures/</strong>
-└── <strong>graph/</strong>
-    └── <a href="datastructures/graph/adjacencylist.go">Adjacency List</a>
+├── <strong>graph/</strong>
+│   ├── <a href="datastructures/graph/adjacencylist-map/adjacencylist.go">Adjacency List (map)</a>
+│   └── <a href="datastructures/graph/adjacencylist-struct/adjacencylist.go">Adjacency List (struct)</a>
+└── <strong>tree/</strong>
+    ├── <a href="datastructures/tree/bst/bst.go">Binary Search Tree (struct)</a>
+    └── <a href="datastructures/tree/nary-map/narytree.go">N-ary Tree (map)</a>
 
 <strong>leetcode/</strong>
 ├── <a href="leetcode/twosum/twosum.go">Two Sum #1</a>
