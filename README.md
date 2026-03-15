@@ -42,7 +42,8 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
     ├── <a href="algorithms/sort/mergesort/mergesort.go">Merge</a>
     ├── <a href="algorithms/sort/quicksort/quicksort.go">Quick</a>
     ├── <a href="algorithms/sort/quicksortinplace/quicksortinplace.go">Quick In-Place</a>
-    └── <a href="algorithms/sort/heapsort/heapsort.go">Heap</a>
+    ├── <a href="algorithms/sort/heapsort/heapsort.go">Heap</a>
+    └── <a href="algorithms/sort/treesort/treesort.go">Tree</a>
 
 <strong>datastructures/</strong>
 ├── <strong>graph/</strong>
