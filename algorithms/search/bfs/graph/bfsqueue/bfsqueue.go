@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Breadth-First Search (BFS) - Graph Search
 // Time: O(V + E) - where V is number of vertices and E is number of edges
 // Space: O(V) - for visited map and queue (in worst case, all nodes in queue)

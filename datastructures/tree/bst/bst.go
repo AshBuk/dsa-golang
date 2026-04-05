@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Binary Search Tree (BST) - Struct-based Implementation
 // Space: O(n) - one node per element
 //

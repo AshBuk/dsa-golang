@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Selection Sort Algorithm
 // Time Complexity: O(n²) - nested loops iterate through the array
 // Space Complexity: O(1) - only uses constant extra space for variables

@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // LeetCode 88: Merge Sorted Array
 // https://leetcode.com/problems/merge-sorted-array/
 //

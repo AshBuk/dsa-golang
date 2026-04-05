@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Depth-First Search (DFS) - File Finder
 // Time: O(n) - where n is total number of files and directories
 // Space: O(h) - where h (height) is maximum depth of directory tree (call stack for recursion)

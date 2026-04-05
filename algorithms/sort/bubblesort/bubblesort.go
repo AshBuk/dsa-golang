@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Bubble Sort Algorithm
 // Time Complexity: O(n²) - worst and average case, O(n) - best case (already sorted)
 // Space Complexity: O(1) - sorts in-place

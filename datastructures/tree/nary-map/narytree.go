@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // N-ary Tree - Map-based Implementation
 // Space: O(n) - one entry per node in the map
 //

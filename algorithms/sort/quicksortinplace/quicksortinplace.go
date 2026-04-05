@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // QuickSort In-Place Algorithm (Lomuto partition scheme)
 // Time: O(n log n) average, O(n²) worst case
 // Space: O(log n) - recursion stack only

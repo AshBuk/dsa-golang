@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Jaccard Similarity Coefficient
 // Measures similarity between two finite sets
 // Formula: J(A,B) = |A ∩ B| / |A ∪ B|

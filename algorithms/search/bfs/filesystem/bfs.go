@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Breadth-First Search (BFS) - File Finder
 // Time: O(n) - where n is total number of files and directories
 // Space: O(w) - where w is maximum width (number of directories at one level)

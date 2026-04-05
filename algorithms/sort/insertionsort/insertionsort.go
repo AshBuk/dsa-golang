@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Insertion Sort Algorithm
 // Time: O(n²) worst case, O(n) best case
 // Space: O(1)

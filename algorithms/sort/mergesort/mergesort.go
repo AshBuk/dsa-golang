@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Merge Sort Algorithm
 // Time: O(n log n) - all cases (worst, average, best)
 // Space: O(n) - creates temporary arrays during merging

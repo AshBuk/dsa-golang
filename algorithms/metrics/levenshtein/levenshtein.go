@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Levenshtein Distance (Edit Distance) — Wagner-Fischer algorithm
 // Measures minimum edits to transform one string into another
 // Operations: insert, delete, replace (each costs 1)

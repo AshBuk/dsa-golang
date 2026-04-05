@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Graph - Adjacency List Implementation
 // Space: O(V + E) - where V is vertices and E is edges
 //

@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Jump Search Algorithm
 // Time: O(√n) - jumps √n blocks of size √n, then linear search within block
 // Space: O(1) - only using constant extra space

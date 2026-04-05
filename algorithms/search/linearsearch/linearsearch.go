@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Linear Search Algorithm
 // Time: O(n) - worst case we need to check every element
 // Space: O(1) - only using constant extra space

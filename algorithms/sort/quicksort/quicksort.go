@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // QuickSort Algorithm
 // Time: O(n log n) average, O(n²) worst case
 // Space: O(n) - creates new slices for left/right partitions

@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Exponential Search Algorithm
 // Time: O(log n) - exponentially expands range, then binary search within block
 // Space: O(1) - only using constant extra space

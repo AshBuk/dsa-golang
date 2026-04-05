@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Tree Sort: each value inserted into BST, in-order traversal yields sorted output.
 // Time: O(n log n) average, O(n²) worst case (sorted input -> not balanced = degenerate "linked list" tree)
 // Space: O(n) - for the tree nodes

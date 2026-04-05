@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Binary Search Algorithm
 // Time: O(log n) - divides search space in half each iteration
 // Space: O(1) - only using constant extra space

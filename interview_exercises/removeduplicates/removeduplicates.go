@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Time: O(n) - single pass, map lookup is O(1)
 // Space: O(n) - map stores up to n unique elements + result array
 

@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // QuickSelect Algorithm (In-Place)
 // Time: O(n) average, O(n²) worst case
 // Space: O(log n) - recursion stack only

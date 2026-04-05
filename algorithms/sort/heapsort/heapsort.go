@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Heap Sort Algorithm
 // Time: O(n log n) - build heap O(n) + n extractions O(log n) each
 // Space: O(1) - sorts in-place

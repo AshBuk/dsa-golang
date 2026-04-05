@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // LeetCode 125: Valid Palindrome
 // https://leetcode.com/problems/valid-palindrome/
 //

@@ -1,3 +1,7 @@
+// Copyright 2025 Asher Buk
+// SPDX-License-Identifier: MIT
+// https://github.com/AshBuk/dsa-golang
+
 // Queue - Slice-based Implementation (FIFO)
 // Space: O(n) - one slot per element in the underlying slice
 //
