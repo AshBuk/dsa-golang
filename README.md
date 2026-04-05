@@ -63,12 +63,6 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 ├── <a href="leetcode/mergesortedarray/mergesortedarray.go">Merge Sorted Array #88</a>
 └── <a href="leetcode/ispalidrome/ispalidrome.go">Valid Palindrome #125</a>
 
-<strong>interview_exercises/</strong>
-├── <a href="interview_exercises/reversestring/reversestring.go">Reverse</a>
-├── <a href="interview_exercises/removeduplicates/removeduplicates.go">Duplicates</a>
-├── <a href="interview_exercises/removewhitespaces/removewhitespaces.go">Whitespaces</a>
-└── <a href="interview_exercises/longestword/longestword.go">Longest</a>
-
 </pre>
 
 ```bash
