@@ -13,9 +13,10 @@
 </div>
 
 **Educational repository** focused on classic fundamental **algorithms and data structures**, implemented idiomatically in Go.
+Not a production-ready library — rather a quick DSA reference and study notes.
 Includes walkthroughs in complex areas, clean code, semantic naming, and emphasis on building real CS understanding without unnecessary abstraction.
 
->Implementations shaped by books, practice, and retyping code for muscle memory.
+>Implementations shaped by books, practice, and retyping code for muscle memory. 
 
 >Diagrams and comments refined with AI assistance.
 
@@ -49,6 +50,10 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 ├── <strong>graph/</strong>
 │   ├── <a href="datastructures/graph/adjacencylist-map/adjacencylist.go">Adjacency List (map)</a>
 │   └── <a href="datastructures/graph/adjacencylist-struct/adjacencylist.go">Adjacency List (struct)</a>
+├── <strong>linkedlist/</strong>
+│   └── <a href="datastructures/linkedlist/singly/linkedlist.go">Singly Linked List (struct)</a>
+├── <strong>queue/</strong>
+│   └── <a href="datastructures/queue/queue.go">Queue (slice)</a>
 └── <strong>tree/</strong>
     ├── <a href="datastructures/tree/bst/bst.go">Binary Search Tree (struct)</a>
     └── <a href="datastructures/tree/nary-map/narytree.go">N-ary Tree (map)</a>
