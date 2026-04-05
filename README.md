@@ -69,11 +69,6 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 ├── <a href="interview_exercises/removewhitespaces/removewhitespaces.go">Whitespaces</a>
 └── <a href="interview_exercises/longestword/longestword.go">Longest</a>
 
-<strong>informatica/</strong>
-├── <a href="informatica/factorial/factorial.go">Factorial</a>
-├── <a href="informatica/fibonacci/fibonacci.go">Fibonacci</a>
-├── <a href="informatica/isprime/isprime.go">Prime</a>
-└── <a href="informatica/multitable/multitable.go">Table</a>
 </pre>
 
 ```bash
