@@ -21,15 +21,13 @@ package main
 import "fmt"
 
 func twoSum(nums []int, target int) []int {
-	numToIdx := make(map[int]int)
+	seen := make(map[int]int)
 	for i, num := range nums {
 		complement := target - num
-		// If complement exists in map, we found the pair
-		if idx, ok := numToIdx[complement]; ok {
+		if idx, ok := seen[complement]; ok {
 			return []int{idx, i}
 		}
-		// Store current number and its index for future lookups
-		numToIdx[num] = i
+		seen[num] = i
 	}
 	return nil
 }
@@ -38,16 +36,16 @@ func main() {
 	fmt.Println(twoSum([]int{2, 7, 11, 15}, 26))
 }
 
-// Brute Force
-// Time: O(n²)
-// Space: O(1)
-// func twoSum(nums []int, target int) []int {
-// 	for i := 0; i < len(nums); i++ {
-// 		for j := i; j < len(nums); j++ {
-// 			if nums[i]+nums[j] == target {
-// 				return []int{i, j}
-// 			}
-// 		}
-// 	}
-// 	return nil
-// }
+/*
+Hash map approach: nums = [2, 7, 11, 15], target = 26
+
+  Step 1:  num=2, complement=24, seen={}        → not found, store {2:0}
+  Step 2:  num=7, complement=19, seen={2:0}     → not found, store {7:1}
+  Step 3:  num=11, complement=15, seen={2:0,7:1} → not found, store {11:2}
+  Step 4:  num=15, complement=11, seen={2:0,7:1,11:2} → found 11 at idx 2 → return [2, 3]
+
+Why it works:
+  - For each num, we check if (target - num) was already seen
+  - Map gives O(1) lookup → total O(n) time
+  - Works on unsorted arrays (vs Two Pointers which needs sorted input)
+*/

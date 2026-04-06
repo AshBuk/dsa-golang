@@ -16,7 +16,8 @@
 //   - nums2: source array with n elements
 //   - n: number of elements in nums2
 //
-// Time complexity: O(m+n), Space complexity: O(1)
+// Time: O(m+n) - each element is placed exactly once
+// Space: O(1) - merges in-place using existing nums1 capacity
 
 package main
 
@@ -53,3 +54,31 @@ func main() {
 	merge(nums1, 6, nums2, 5)
 	fmt.Println("After merge:", nums1)
 }
+
+/*
+Merge from the end: nums1 = [1,3,5,0,0,0], m=3, nums2 = [2,4,6], n=3
+
+  Start:   p1      p2          p
+         [ 1 | 3 | 5 | 0 | 0 | 0 ]    [ 2 | 4 | 6 ]
+
+  Step 1:  nums1[p1]=5 < nums2[p2]=6 → place 6 at p
+         [ 1 | 3 | 5 | 0 | 0 | 6 ]
+
+  Step 2:  nums1[p1]=5 > nums2[p2]=4 → place 5 at p
+         [ 1 | 3 | 5 | 0 | 5 | 6 ]
+
+  Step 3:  nums1[p1]=3 < nums2[p2]=4 → place 4 at p
+         [ 1 | 3 | 5 | 4 | 5 | 6 ]
+
+  Step 4:  nums1[p1]=3 > nums2[p2]=2 → place 3 at p
+         [ 1 | 3 | 3 | 4 | 5 | 6 ]
+
+  Step 5:  nums1[p1]=1 < nums2[p2]=2 → place 2 at p
+         [ 1 | 2 | 3 | 4 | 5 | 6 ]
+
+  Done — nums2 exhausted, nums1 remainder already in place.
+
+Why merge from the end:
+  - Filling right-to-left avoids overwriting unprocessed nums1 elements
+  - No extra array needed → O(1) space
+*/

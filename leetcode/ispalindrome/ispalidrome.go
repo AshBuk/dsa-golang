@@ -30,7 +30,8 @@ import (
 )
 
 // Go approach using standard library
-// Time Complexity: O(n), Space Complexity: O(n)
+// Time: O(n) - single pass to filter + half-length comparison
+// Space: O(n) - builds filtered string copy
 func isPalindrome(s string) bool {
 	var builder strings.Builder
 	for _, c := range s {
