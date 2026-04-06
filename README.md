@@ -61,7 +61,10 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 <strong>leetcode/</strong>
 ├── <a href="leetcode/twosum/twosum.go">Two Sum #1</a>
 ├── <a href="leetcode/mergesortedarray/mergesortedarray.go">Merge Sorted Array #88</a>
-└── <a href="leetcode/ispalindrome/ispalidrome.go">Valid Palindrome #125</a>
+├── <a href="leetcode/ispalindrome/ispalidrome.go">Valid Palindrome #125</a>
+├── <a href="leetcode/twosumii/twosumii.go">Two Sum II #167</a>
+├── <a href="leetcode/intersection/intersection.go">Intersection of Two Arrays #349</a>
+└── <a href="leetcode/intersection/intersection.go">Intersection of Two Arrays II #350</a>
 
 </pre>
 
