@@ -42,7 +42,7 @@ func partition(arr []int, lo, hi int) int {
 }
 
 func main() {
-	arr := []int{4, 6, 2, 8, 3, 7, 1, 9, 5, 10}
+	arr := []int{4, 6, 2, 8, 3, 10, 1, 9, 5, 7}
 	QuickSortInPlace(arr)
 	fmt.Println(arr)
 }
@@ -50,40 +50,52 @@ func main() {
 /*
 How in-place quick sort works (Lomuto partition):
 
-Example: [4, 6, 2, 8, 3, 7, 1, 9, 5, 10]
+Example: [4, 6, 2, 8, 3, 10, 1, 9, 5, 7]
 
-PARTITION PHASE (in-place rearrangement):
-    Initial: [4, 6, 2, 8, 3, 7, 1, 9, 5, 10]
-                                         ↑ pivot = 10 (last element)
+PARTITION (pivot = 7, last element):
+    [4, 6, 2, 8, 3, 10, 1, 9, 5, 7]
+                                 ↑ pivot = 7
 
-    After partition: [4, 6, 2, 8, 3, 7, 1, 9, 5, 10]
-                     └──────elements ≤ 10──────┘ │
-                     All elements fit, pivot stays at end
-                     pivotIdx = 9
+    Scan & swap elements ≤ 7 to the left (storeIdx starts at -1):
+    Note: storeIdx++ happens BEFORE swap
+    i=0: 4≤7 → storeIdx(++)=0, swap arr[0]↔arr[0]  → [4, 6, 2, 8, 3, 10, 1, 9, 5, 7]
+    i=1: 6≤7 → storeIdx=1, swap arr[1]↔arr[1]  → [4, 6, 2, 8, 3, 10, 1, 9, 5, 7]
+    i=2: 2≤7 → storeIdx=2, swap arr[2]↔arr[2]  → [4, 6, 2, 8, 3, 10, 1, 9, 5, 7]
+    i=3: 8>7 → skip, storeIdx stays at 2  ← storeIdx starts lagging behind i
+    i=4: 3≤7 → storeIdx=3, swap arr[3]↔arr[4]  → [4, 6, 2, 3, 8, 10, 1, 9, 5, 7]
+    i=5: 10>7 → skip
+    i=6: 1≤7 → storeIdx=4, swap arr[4]↔arr[6]  → [4, 6, 2, 3, 1, 10, 8, 9, 5, 7]
+    i=7: 9>7 → skip
+    i=8: 5≤7 → storeIdx=5, swap arr[5]↔arr[8]  → [4, 6, 2, 3, 1, 5, 8, 9, 10, 7]
 
-    Recursion: quickSort(arr, 0, 8) and quickSort(arr, 10, 9) - nothing
+    Place pivot: swap arr[6]↔arr[9]
+    Result: [4, 6, 2, 3, 1, 5, 7, 9, 10, 8]
+            └─────≤7────────┘  ↑  └──>7───┘
+                          pivotIdx=6
 
-First recursion on [4, 6, 2, 8, 3, 7, 1, 9, 5]:
-    pivot = 5 (last)
-    After swaps: [4, 2, 3, 1, 5, 7, 6, 9, 8]
-                 └──≤5─────┘  │  └──>5────┘
-                 pivotIdx = 4
+    Recursion: quickSort(0,5) and quickSort(7,9)
 
-    Recursion: quickSort(arr, 0, 3) and quickSort(arr, 5, 8)
+LEFT [4, 6, 2, 3, 1, 5] pivot = 5:
+    After partition: [4, 2, 3, 1, 5, 6]
+                     └───≤5────┘  ↑  >5
+                              pivotIdx=4
 
-Continue left [4, 2, 3, 1]:
-    pivot = 1
-    After swaps: [1, 2, 3, 4]
-                  │ └─>1───┘
-                 pivotIdx = 0
+    LEFT [4, 2, 3, 1] pivot = 1:
+        After partition: [1, 2, 3, 4]
+                          ↑  └>1───┘
+                      pivotIdx=0
 
-Continue right [7, 6, 9, 8]:
-    pivot = 8
-    After swaps: [7, 6, 8, 9]
-                 └≤8─┘  │  >8
-                 pivotIdx = 2
+    Already sorted → done
 
-... recursion continues until sorted
+RIGHT [9, 10, 8] pivot = 8:
+    After partition: [8, 10, 9]
+                      ↑  └>8─┘
+                  pivotIdx=7
+
+    [10, 9] pivot = 9:
+        After partition: [9, 10]
+                          ↑  >9
+                      pivotIdx=8
 
 RESULT: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] ✓
 
