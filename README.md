@@ -61,7 +61,8 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 <strong>systemdesign/</strong>
 ├── <a href="systemdesign/circuitbreaker/circuitbreaker.go">Circuit Breaker</a>
 ├── <a href="systemdesign/tokenbucket/tokenbucket.go">Token Bucket Rate Limiter</a>
-└── <a href="systemdesign/ttlcache/ttlcache.go">Thread-Safe TTL Cache</a>
+├── <a href="systemdesign/ttlcache/ttlcache.go">Thread-Safe TTL Cache</a>
+└── <a href="systemdesign/lrucache/lrucache.go">Thread-Safe LRU Cache (with TTL)</a>
 
 <strong>leetcode/</strong>
 ├── <a href="leetcode/twosum/twosum.go">Two Sum #1</a>
