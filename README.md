@@ -58,6 +58,9 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
     ├── <a href="datastructures/tree/bst/bst.go">Binary Search Tree (struct)</a>
     └── <a href="datastructures/tree/nary-map/narytree.go">N-ary Tree (map)</a>
 
+<strong>systemdesign/</strong>
+└── <a href="systemdesign/circuitbreaker/circuitbreaker.go">Circuit Breaker</a>
+
 <strong>leetcode/</strong>
 ├── <a href="leetcode/twosum/twosum.go">Two Sum #1</a>
 ├── <a href="leetcode/mergesortedarray/mergesortedarray.go">Merge Sorted Array #88</a>
