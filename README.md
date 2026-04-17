@@ -1,4 +1,4 @@
-<img src="ALgoDSgo.png" alt="dsa-golang Logo" width="250" align="right">
+<img src="dsa-golang.png" alt="dsa-golang Logo" width="250" align="right">
 
 <div align="center">
 

@@ -8,9 +8,9 @@
 //
 // Each algorithm is in its own package and can be used independently:
 //
-//	import "github.com/asherbuk/AlgoDSgo/algorithms/sort/quicksort"
-//	import "github.com/asherbuk/AlgoDSgo/algorithms/search/binarysearch"
-//	import "github.com/asherbuk/AlgoDSgo/datastructures/graph"
+//	import "github.com/AshBuk/dsa-golang/algorithms/sort/quicksort"
+//	import "github.com/AshBuk/dsa-golang/algorithms/search/binarysearch"
+//	import "github.com/AshBuk/dsa-golang/datastructures/graph"
 //
-// For more information, see: https://github.com/AshBuk/ALgoDSgo
+// For more information, see: https://github.com/AshBuk/dsa-golang
 package algods
