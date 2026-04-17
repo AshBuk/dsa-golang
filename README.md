@@ -59,7 +59,8 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
     └── <a href="datastructures/tree/nary-map/narytree.go">N-ary Tree (map)</a>
 
 <strong>systemdesign/</strong>
-└── <a href="systemdesign/circuitbreaker/circuitbreaker.go">Circuit Breaker</a>
+├── <a href="systemdesign/circuitbreaker/circuitbreaker.go">Circuit Breaker</a>
+└── <a href="systemdesign/tokenbucket/tokenbucket.go">Token Bucket Rate Limiter</a>
 
 <strong>leetcode/</strong>
 ├── <a href="leetcode/twosum/twosum.go">Two Sum #1</a>
