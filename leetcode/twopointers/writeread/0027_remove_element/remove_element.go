@@ -17,7 +17,7 @@
 //   - 0 <= nums[i] <= 50
 //   - 0 <= val <= 100
 //
-// Time: O(n) - single pass with two pointers
+// Time: O(n) - single pass with read/write pointers
 // Space: O(1) - in-place
 
 package main
@@ -26,14 +26,14 @@ import "fmt"
 
 // 27: remove all occurrences of val in-place
 func removeElement(nums []int, val int) int {
-	slow := 0
-	for fast := 0; fast < len(nums); fast++ {
-		if nums[fast] != val {
-			nums[slow] = nums[fast]
-			slow++
+	write := 0
+	for read := 0; read < len(nums); read++ {
+		if nums[read] != val {
+			nums[write] = nums[read]
+			write++
 		}
 	}
-	return slow
+	return write
 }
 
 func main() {
@@ -41,49 +41,49 @@ func main() {
 }
 
 /*
-Slow/Fast Pointers pattern:
-  - slow marks the write position, fast scans ahead
-  - fast always moves forward; slow only advances on a valid write
-  - everything before slow is the "clean" result
+Read/Write Pointers pattern:
+  - write marks the next position to fill, read scans ahead
+  - read always moves forward; write only advances on a valid write
+  - everything before write is the "clean" result
 
 Remove val=2: nums = [0, 1, 2, 2, 3, 0, 4, 2]
 
-  fast=0: 0!=2 → write nums[0]=0, slow++
-          S
-          F
+  read=0: 0!=2 → write nums[0]=0, write++
+          W
+          R
         [ 0 | 1 | 2 | 2 | 3 | 0 | 4 | 2 ]
 
-  fast=1: 1!=2 → write nums[1]=1, slow++
-              S
-              F
+  read=1: 1!=2 → write nums[1]=1, write++
+              W
+              R
         [ 0 | 1 | 2 | 2 | 3 | 0 | 4 | 2 ]
 
-  fast=2: 2==2 → skip
-              S
-                  F
+  read=2: 2==2 → skip
+              W
+                  R
         [ 0 | 1 | 2 | 2 | 3 | 0 | 4 | 2 ]
 
-  fast=3: 2==2 → skip
-              S
-                      F
+  read=3: 2==2 → skip
+              W
+                      R
         [ 0 | 1 | 2 | 2 | 3 | 0 | 4 | 2 ]
 
-  fast=4: 3!=2 → write nums[2]=3, slow++
-                  S
-                          F
+  read=4: 3!=2 → write nums[2]=3, write++
+                  W
+                          R
         [ 0 | 1 | 3 | 2 | 3 | 0 | 4 | 2 ]
 
-  fast=5: 0!=2 → write nums[3]=0, slow++
-                      S
-                              F
+  read=5: 0!=2 → write nums[3]=0, write++
+                      W
+                              R
         [ 0 | 1 | 3 | 0 | 3 | 0 | 4 | 2 ]
 
-  fast=6: 4!=2 → write nums[4]=4, slow++
-                          S
-                                  F
+  read=6: 4!=2 → write nums[4]=4, write++
+                          W
+                                  R
         [ 0 | 1 | 3 | 0 | 4 | 0 | 4 | 2 ]
 
-  Return slow=5 → first 5 elements are the result
+  Return write=5 → first 5 elements are the result
 
-Key: overwrite (nums[slow] = nums[fast]) — tail values don't matter
+Key: overwrite (nums[write] = nums[read]) — tail values don't matter
 */

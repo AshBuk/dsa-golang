@@ -18,7 +18,7 @@
 //
 // Follow up: minimize the total number of operations done.
 //
-// Time: O(n) - single pass with two pointers
+// Time: O(n) - single pass with read/write pointers
 // Space: O(1) - in-place
 
 package main
@@ -27,13 +27,12 @@ import "fmt"
 
 // 283: move all zeroes to end, keeping order
 func moveZeroes(nums []int) []int {
-	slow, fast := 0, 0
-	for slow < len(nums) && fast < len(nums) {
-		if nums[fast] != 0 {
-			nums[slow], nums[fast] = nums[fast], nums[slow]
-			slow++
+	write := 0
+	for read := 0; read < len(nums); read++ {
+		if nums[read] != 0 {
+			nums[write], nums[read] = nums[read], nums[write]
+			write++
 		}
-		fast++
 	}
 	return nums
 }
@@ -43,39 +42,39 @@ func main() {
 }
 
 /*
-Slow/Fast Pointers pattern:
-  - slow marks the write position, fast scans ahead
-  - fast always moves forward; slow only advances on a valid write
-  - everything before slow is the "clean" result
+Read/Write Pointers pattern:
+  - write marks the next position to fill, read scans ahead
+  - read always moves forward; write only advances on a valid write
+  - everything before write is the "clean" result
 
 Move zeroes: nums = [0, 1, 0, 3, 12]
 
-  fast=0: 0==0 → skip
-          S
-          F
+  read=0: 0==0 → skip
+          W
+          R
         [ 0 | 1 | 0 | 3 | 12 ]
 
-  fast=1: 1!=0 → swap(0,1), slow++
-          S
-              F
+  read=1: 1!=0 → swap(0,1), write++
+          W
+              R
         [ 1 | 0 | 0 | 3 | 12 ]
 
-  fast=2: 0==0 → skip
-              S
-                  F
+  read=2: 0==0 → skip
+              W
+                  R
         [ 1 | 0 | 0 | 3 | 12 ]
 
-  fast=3: 3!=0 → swap(0,3), slow++
-              S
-                      F
+  read=3: 3!=0 → swap(0,3), write++
+              W
+                      R
         [ 1 | 3 | 0 | 0 | 12 ]
 
-  fast=4: 12!=0 → swap(0,12), slow++
-                  S
-                          F
+  read=4: 12!=0 → swap(0,12), write++
+                  W
+                          R
         [ 1 | 3 | 12 | 0 | 0 ]
 
   Return [1, 3, 12, 0, 0]
 
-Key: swap (nums[slow], nums[fast]) — zeroes must end up at the end
+Key: swap (nums[write], nums[read]) — zeroes must end up at the end
 */
