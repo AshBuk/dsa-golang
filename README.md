@@ -68,15 +68,18 @@ Includes walkthroughs in complex areas, clean code, semantic naming, and emphasi
 ├── <strong>hashmap/</strong>
 │   ├── <a href="leetcode/hashmap/0001_two_sum/two_sum.go">Two Sum #1</a>
 │   └── <a href="leetcode/hashmap/0349_0350_intersection/intersection.go">Intersection of Two Arrays #349 / II #350</a>
-└── <strong>twopointers/</strong>
-    ├── <strong>oppositeends/</strong> — converging pointers from both ends
-    │   ├── <a href="leetcode/twopointers/oppositeends/0125_valid_palindrome/valid_palindrome.go">Valid Palindrome #125</a>
-    │   └── <a href="leetcode/twopointers/oppositeends/0167_two_sum_ii/two_sum_ii.go">Two Sum II #167</a>
-    ├── <strong>parallelpointers/</strong> — one pointer per input sequence
-    │   └── <a href="leetcode/twopointers/parallelpointers/0088_merge_sorted_array/merge_sorted_array.go">Merge Sorted Array #88</a>
-    └── <strong>writeread/</strong> — in-place write/read on a single array
-        ├── <a href="leetcode/twopointers/writeread/0027_remove_element/remove_element.go">Remove Element #27</a>
-        └── <a href="leetcode/twopointers/writeread/0283_move_zeroes/move_zeroes.go">Move Zeroes #283</a>
+├── <strong>twopointers/</strong>
+│   ├── <strong>oppositeends/</strong> — converging pointers from both ends
+│   │   ├── <a href="leetcode/twopointers/oppositeends/0125_valid_palindrome/valid_palindrome.go">Valid Palindrome #125</a>
+│   │   └── <a href="leetcode/twopointers/oppositeends/0167_two_sum_ii/two_sum_ii.go">Two Sum II #167</a>
+│   ├── <strong>parallelpointers/</strong> — one pointer per input sequence
+│   │   └── <a href="leetcode/twopointers/parallelpointers/0088_merge_sorted_array/merge_sorted_array.go">Merge Sorted Array #88</a>
+│   └── <strong>writeread/</strong> — in-place write/read on a single array
+│       ├── <a href="leetcode/twopointers/writeread/0027_remove_element/remove_element.go">Remove Element #27</a>
+│       └── <a href="leetcode/twopointers/writeread/0283_move_zeroes/move_zeroes.go">Move Zeroes #283</a>
+└── <strong>slidingwindow/</strong>
+    └── <strong>fixedsize/</strong> — window of fixed length k
+        └── <a href="leetcode/slidingwindow/fixedsize/0643_1343_subarray/subarray.go">Maximum Average Subarray #643 / Subarrays Above Threshold #1343</a>
 
 </pre>
 
