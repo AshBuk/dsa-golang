@@ -27,3 +27,7 @@ Each is implemented here as a single educational file: minimal correct code, wal
 - ⬜ **URL Shortener** — hashing, collision handling
 - ⬜ **Middleware Chain** — composable interceptors (the "API gateway" core)
 - ⬜ **In-Memory KV with Snapshot** — `Set/Get/Delete` + persist/restore (lighter than full WAL)
+
+## Tier 4 — concurrency primitives (useful to know)
+
+- ✅ [**Connection Registry**](connregistry/connregistry.go) — `sync.Map` for write-once/delete-once + read-many fan-out (chat / WebSocket gateway core)
